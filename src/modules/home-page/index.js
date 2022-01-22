@@ -27,6 +27,9 @@ const HomePage = () => {
       <Link className="home-button" to="/deck">
         Card Deck
       </Link>
+      <Link className="home-button" to="/game">
+        Try game (in development)
+      </Link>
     </div>
   );
 };

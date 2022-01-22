@@ -7,7 +7,7 @@ import {
   DELETE_CARD,
 } from "../const";
 
-import { shuffleFunc, deleteCardFunc, sortSuitFunc } from "../utils";
+import { shuffleFunc, deleteCardFunc, sortSuitFunc } from "../../../utils";
 
 /**
  * @desc Initial state of deck reducer.

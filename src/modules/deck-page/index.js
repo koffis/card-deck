@@ -13,21 +13,6 @@ import "./index.scss";
  */
 const DeckPage = () => {
   /**
-   * @desc [Hook dispatch] Function for dispatching Redux actions.
-   * Pass action
-   * @param action {object} - instructions for changing data within Redux store
-   * @return {void}
-   */
-  const dispatch = useDispatch();
-
-  /**
-   * @desc [Hook effect] Receive cards deck on mount.
-   */
-  useEffect(() => {
-    dispatch(receiveDeck());
-  }, [dispatch]);
-
-  /**
    * @desc [Hook selector] Take data about cards from the `deck` reducer.
    */
   const deck = useSelector((state) => state.deck.cards);

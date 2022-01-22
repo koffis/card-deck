@@ -1,0 +1,106 @@
+@function getRem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+.cards {
+  margin-top: getRem(250);
+  margin-left: getRem(30);
+  img {
+    border: getRem(2) solid white;
+    width: getRem(160);
+  }
+
+  h3 {
+    color: white;
+    font-size: getRem(30);
+    margin-left: getRem(20);
+  }
+}
+
+.user {
+  &-hand {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    align-self: center;
+    justify-self: center;
+    height: getRem(600);
+    border: getRem(5) solid white;
+    background-color: transparent;
+    border-radius: 50%;
+    bottom: getRem(-400);
+    margin-left: getRem(100);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.opponent {
+  &-hand {
+    width: 80vw;
+    align-self: center;
+    justify-self: center;
+    height: getRem(600);
+    border: getRem(5) solid white;
+    background-color: transparent;
+    border-radius: 50%;
+    top: getRem(-400);
+    margin-left: getRem(100);
+    position: absolute;
+    &-cards {
+      display: flex;
+      justify-content: center;
+      margin-top: getRem(400);
+    }
+  }
+}
+
+.controll-panel {
+  z-index: 10;
+  font-family: "NewYork";
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: getRem(50);
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+
+  button {
+    cursor: pointer;
+    font-size: getRem(20);
+    background-color: rgb(67, 70, 255);
+    border: 0;
+    border-radius: getRem(5);
+    padding: getRem(5) getRem(15);
+    color: rgb(255, 255, 255);
+    &:hover {
+      border: getRem(1) solid white;
+      background-color: rgb(9, 10, 112);
+    }
+  }
+  &-home {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: getRem(45);
+    height: getRem(45);
+    background-color: white;
+    margin-right: getRem(15);
+    border-radius: getRem(8);
+
+    img {
+      width: getRem(40);
+    }
+  }
+}
+
+.user-card-item {
+  &-image {
+    width: getRem(160);
+  }
+}

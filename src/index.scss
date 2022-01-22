@@ -20,11 +20,6 @@
   }
 }
 
-@function getRem($size) {
-  $remSize: $size / 16;
-  @return #{$remSize}rem;
-}
-
 html {
   font-size: calc(10 * 100vw / 320);
   width: calc(0vw + 100%);
