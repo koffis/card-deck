@@ -3,6 +3,7 @@ import { receiveDeck } from "./actions/deckActions";
 import { useDispatch, useSelector } from "react-redux";
 
 import CardItem from "./components/CardItem";
+import ControllPanel from "./components/ControllPanel";
 
 import "./index.scss";
 
@@ -19,9 +20,12 @@ const DeckPage = () => {
     <CardItem key={card.code} image={card.image} code={card.code} />
   ));
 
-  console.log(deck);
-
-  return <div className="deck">{cardsList}</div>;
+  return (
+    <div className="deck">
+      {cardsList}
+      <ControllPanel />
+    </div>
+  );
 };
 
 export default DeckPage;

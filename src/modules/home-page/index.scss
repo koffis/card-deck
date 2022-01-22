@@ -25,10 +25,14 @@
   }
 
   a {
+    margin-top: getRem(50);
     cursor: pointer;
     font-size: getRem(60);
     color: rgb(255, 255, 255);
     text-decoration: none;
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
   }
 }
 

@@ -1,4 +1,12 @@
-import { GET_DECK_REQUEST, GET_DECK_SUCCESS, GET_DECK_FAILURE } from "../const";
+import {
+  GET_DECK_REQUEST,
+  GET_DECK_SUCCESS,
+  GET_DECK_FAILURE,
+  SHUFFLE_DECK,
+  DELETE_CARD,
+} from "../const";
+
+import { shuffleFunc, deleteCardFunc } from "../utils";
 
 const initialState = {
   cards: [],
@@ -18,6 +26,16 @@ const handlers = {
     cards,
   }),
   [GET_DECK_FAILURE]: (state) => ({ ...state, loading: false }),
+  [SHUFFLE_DECK]: (state) => ({
+    ...state,
+    loading: false,
+    cards: shuffleFunc(state.cards),
+  }),
+  [DELETE_CARD]: (state, { payload: { code } }) => ({
+    ...state,
+    loading: false,
+    cards: deleteCardFunc(state.cards, code),
+  }),
   DEFAULT: (state) => state,
 };
 
