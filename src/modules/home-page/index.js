@@ -1,5 +1,8 @@
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import cards from "../../assets/images/cards.png";
+import { receiveDeck } from "../deck-page/actions/deckActions";
 
 import "./index.scss";
 
@@ -8,6 +11,20 @@ import "./index.scss";
  * @return {JSX.Element} - module that includes a default page, when user opens the web-app
  */
 const HomePage = () => {
+  /**
+   * @desc [Hook dispatch] Function for dispatching Redux actions.
+   * Pass action
+   * @param action {object} - instructions for changing data within Redux store
+   * @return {void}
+   */
+  const dispatch = useDispatch();
+
+  /**
+   * @desc [Hook effect] Receive cards deck on mount.
+   */
+  useEffect(() => {
+    dispatch(receiveDeck());
+  }, [dispatch]);
   return (
     <div className="home">
       <a className="fork-me" href="https://github.com/koffis/card-deck">

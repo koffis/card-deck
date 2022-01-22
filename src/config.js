@@ -16,4 +16,5 @@ export const ROUTES = {
   root: "/",
   deck: "/deck",
   game: "/game",
+  error: "/error",
 };

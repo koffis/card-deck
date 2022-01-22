@@ -1,7 +1,5 @@
 import { useState, useEffect, memo } from "react";
-import { useSelector, useDispatch } from "react-redux";
-
-import { receiveDeck } from "../deck-page/actions/deckActions";
+import { useSelector } from "react-redux";
 
 import UserHand from "./components/UserHand";
 import OpponentHand from "./components/OpponentHand";
@@ -14,7 +12,7 @@ import ControllPanel from "./components/ControllPanel";
 
 const GamePage = memo(() => {
   /**
-   * @desc [Hook selector] Take data about cards from the `deck` reducer.
+   * @desc [Hook selector] Take data about cards from the `deck` reducer.s
    */
   let deck = shuffleFunc(useSelector((state) => state.deck.cards));
 

@@ -80,7 +80,7 @@ export const receiveDeck = () => async (dispatch) => {
 
     dispatch(success(sortedCards));
   } catch (e) {
-    // TODO - handle this errors
+    window.location.href = "/error";
     dispatch(failure());
   }
 };
@@ -118,7 +118,7 @@ export const receivePartDeck = (suit) => async (dispatch) => {
 
     dispatch(success(sortedCards));
   } catch (e) {
-    // TODO - handle this errors
+    window.location.href = "/error";
     dispatch(failure());
   }
 };
