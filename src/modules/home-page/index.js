@@ -3,6 +3,10 @@ import cards from "../../assets/images/cards.png";
 
 import "./index.scss";
 
+/**
+ * @desc Module "Home page".
+ * @return {JSX.Element} - module that includes a default page, when user opens the web-app
+ */
 const HomePage = () => {
   return (
     <div className="home">
@@ -20,7 +24,9 @@ const HomePage = () => {
       <div className="home-logo">
         <img src={cards} alt="cards" />
       </div>
-      <Link to="/deck">Card Deck</Link>
+      <Link className="home-button" to="/deck">
+        Card Deck
+      </Link>
     </div>
   );
 };

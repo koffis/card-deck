@@ -1,7 +1,7 @@
 /**
  * @desc Routes for getting cards deck.
  * @const
- * @type {object}
+ * @type {string}
  * @default
  */
 export const API_URL = "https://deckofcardsapi.com/api/deck/new/draw/?count=52";

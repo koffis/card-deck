@@ -8,6 +8,10 @@ import "./index.scss";
 
 const { root, deck } = ROUTES;
 
+/**
+ * @desc component "App".
+ * @return {JSX.Element} - main component with routing
+ */
 const App = () => {
   return (
     <Switch>
