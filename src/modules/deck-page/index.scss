@@ -61,4 +61,23 @@
       background-color: rgb(9, 10, 112);
     }
   }
+
+  &-sort {
+    display: flex;
+    &-item {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: getRem(45);
+      height: getRem(45);
+      background-color: white;
+      margin-right: getRem(15);
+      border-radius: getRem(8);
+
+      img {
+        width: getRem(40);
+      }
+    }
+  }
 }
