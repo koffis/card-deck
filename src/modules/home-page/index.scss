@@ -1,0 +1,39 @@
+@function getRem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}
+
+.home {
+  padding-top: getRem(100);
+  font-family: "NewYork";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &-logo {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    img {
+      padding: getRem(20);
+      width: getRem(150);
+    }
+    transition: 1s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  a {
+    cursor: pointer;
+    font-size: getRem(60);
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+  }
+}
+
+.fork-me {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
