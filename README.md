@@ -5,6 +5,7 @@ Card Deck is a web-application, that allow you to make different operations over
 - You can display all cards
 - Shuffle them
 - Sort bu suits
+- Delete any card
 - Show only some of them
 
 ## Installation
